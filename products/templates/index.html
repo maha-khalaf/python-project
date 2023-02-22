@@ -1,10 +1,15 @@
+<!-- link with base.html -->
 {% extends 'base.html' %}
+
+<!-- specify the name of the block we're using -->
 {% block content %}
+
     <h1>Products</h1>
     <div class="row">
+
         {% for product in products %}
         <div class="col">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem; height:100%">
                 <img src="{{ product.image_url }}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{ product.name }}</h5>
@@ -14,5 +19,7 @@
               </div>
         </div>
         {% endfor %}
+        
     </div>
+
 {% endblock %}

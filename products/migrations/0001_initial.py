@@ -11,6 +11,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        #creates a new db table
         migrations.CreateModel(
             name='Product',
             fields=[
